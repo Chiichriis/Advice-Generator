@@ -1,0 +1,126 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-GrayishBlue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body{
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    background-color: var(--Dark-GrayishBlue);
+    padding: 1rem;
+    border-radius: .5rem;
+    height: 13rem;
+    text-align: center;
+    font-family: OpenSans;
+}
+.advice-id{
+    color: var(--Neon-Green);
+    font-size: .7rem;
+    padding: .5rem;
+}
+.advice{
+    color: var(--Light-Cyan);
+    font-size: 1rem;
+    padding: 1rem .5rem 1.2rem;
+}
+.pattern-divider{
+    background-image: url(images/pattern-divider-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 1rem;
+}
+.dice-icon{
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    padding: 1rem;
+    margin: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dice-icon img{
+    height: 1.1rem;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Desktop Design */
+@media (min-width:800px) {
+    .card{
+        height: 15rem;
+        width: 25rem;
+    }
+    .advice-id{
+        font-size: .8rem;
+    }
+    .advice{
+        font-size: 1.2rem;
+        padding: 1rem .5rem 1.5rem;
+    }
+    .pattern-divider{
+        background-image: url(images/pattern-divider-desktop.svg);
+    }
+    .dice-icon{
+        cursor: pointer;
+    }
+    .dice-icon:hover{
+        box-shadow: 0 .1rem 1rem .5rem var(--Neon-Green);
+        transition: ease-in-out .2s;
+    }
+    .dice-icon img{
+        height: 1.2rem;
+    }
+}
